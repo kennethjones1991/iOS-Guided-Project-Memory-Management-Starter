@@ -49,6 +49,11 @@
     me.car = honda;
     
     [honda release];
+    
+    Car *anotherCar = me.car;
+    
+    me.car = anotherCar;
+    
     NSLog(@"My car is: %@", me.car);
     [me release];
 }
