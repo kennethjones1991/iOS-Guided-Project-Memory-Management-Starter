@@ -45,13 +45,14 @@
     [firstString release];
     
     Person *me = [[Person alloc] init];
-    Car *honda = [[Car alloc] initWithMake:@"Civic Si"];
+    
+//    Car *honda = [[Car alloc] initWithMake:@"Civic Si"];
+    Car *honda = [Car carWithMake:@"Civic Si"];
     me.car = honda;
     
-    [honda release];
+//    [honda release];
     
     Car *anotherCar = me.car;
-    
     me.car = anotherCar;
     
     NSLog(@"My car is: %@", me.car);

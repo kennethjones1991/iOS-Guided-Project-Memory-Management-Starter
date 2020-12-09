@@ -11,6 +11,17 @@
 
 @implementation Car
 
++ (instancetype)car
+{
+    return [self carWithMake:nil];
+}
+
++ (instancetype)carWithMake:(NSString *)make
+{
+    Car *car = [[self alloc] initWithMake:make];
+    return [car autorelease];
+}
+
 - (instancetype)initWithMake:(NSString *)make
 {
     self = [super init];
@@ -20,9 +31,6 @@
     }
     return self;
 }
-
-// TODO: Implement autoreleased class car method
-
 
 - (void)dealloc
 {
